@@ -23,7 +23,7 @@ mongoose.connect(DB, {
   }).then(() => {
     console.log("Connection is successful");
 }).catch(e => {
-    console.log(e);
+    console.log(e); 
 })
 
 app.listen(PORT, '0.0.0.0' ,() => {
