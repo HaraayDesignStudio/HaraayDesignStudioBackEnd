@@ -34,14 +34,24 @@ router.post("/api/application", async (req, res) => {
 
 router.post("/api/contact", async (req, res) => {
   try {
-    const { firstName, lastName, email, number, description } = req.body;
+    const {
+      firstName,
+      lastName,
+      email,
+      description,
+      companyName,
+      jobTitle,
+      enquiryType,
+    } = req.body;
 
     let contact = new Contact({
       firstName,
       lastName,
       email,
-      number,
       description,
+      companyName,
+      jobTitle,
+      enquiryType,
     });
 
     user = await contact.save();

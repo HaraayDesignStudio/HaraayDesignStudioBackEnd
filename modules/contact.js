@@ -17,13 +17,20 @@ const contactSchema = mongoose.Schema(
       required: true,
       trim: true,
     },
-    number: {
+    companyName: {
       type: String,
-      required: true,
       trim: true,
     },
     description: {
       type: String,
+    },
+    jobTitle: {
+      type: String,
+      trim: true,
+    },
+    enquiryType: {
+      type: String,
+      trim: true,
     },
   },
   { timestamps: true }
